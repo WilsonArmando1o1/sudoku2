@@ -1,0 +1,39 @@
+from tkinter import *                                                                             
+                                                                                                  
+#wilsonArmando
+
+root=tk()                                                                                         
+root.title("SUDOKU SOLVER")                                                                       
+root.geometry("324x550")                                                                          
+                                                                                                  
+                                                                                                  
+laber=label(root, text = "ingrese datos y clilc en solve").grid(ROW = 0, columnspan=1)            
+                                                                                                  
+errlabel=label(root, text="",fg="red")                                                            
+errlabel.grid(ROW=15,column=1,columnspan=10,pady=5)                                               
+                                                                                                  
+solvedlabel(root, text="",fg="green"                                                              
+solvedlabe.grid(ROW=15,column=1,columnspan=10)                                                    
+                                                                                                  
+cells ={}                                                                                         
+                                                                                                  
+def validatNumber(p):                                                                             
+   out=(P.isdigit() or P=="") and len(P) <2                                                       
+   return out                                                                                     
+reg=root.register(ValidatNumber)                                                                  
+                                                                                                  
+def draw3x3Grid(ROW,column,bgcolor):                                                              
+    for i in range(3):                                                                            
+       for j in range(3):                                                                         
+         e = Entry(root,width,= 5,bg=bgcolor,justify="center",Validat",Validatecommand=(reg,"%P"))
+         e.grid(ROW=ROW+i+1,column=column+j+1,stiky="nsew",padx=1,pady=1,ipady=5)                 
+cells[(ROW+i+1,column+j+1)] = e                                                                   
+def drag9x9grid():                                                                                
+   color= "#DOFFFF"                                                                               
+    for rowNo in range(1,10,3):                                                                   
+       for colNo in range(0,9,3):                                                                 
+          draw3x3Grid(rowNo, colNo,color)                                                         
+          if color=="#DOFFFF":                                                                    
+             color="FFFFdo"                                                                       
+          else:                                                                                   
+             color="#DOFFFF"                                                                      
